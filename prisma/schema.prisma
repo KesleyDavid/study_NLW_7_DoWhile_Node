@@ -17,6 +17,21 @@ model User {
   avatar_url  String // String? => optional
   login       String
 
+  messages Message[]
+
   // name the table on database
   @@map("users")
+}
+
+model Message {
+  id          String @id @default(uuid())
+  text        String
+  created_at  DateTime @default(now())
+
+  user User @relation(fields: [user_id], references: [id])
+  
+  user_id String
+  
+  // name the table on database
+  @@map("messages")
 }

@@ -10,3 +10,4 @@ yarn prisma init
 
 Create prisma table users  
 yarn prisma migrate dev (name = create-user)  
+yarn prisma migrate dev (name = create-messages)  
