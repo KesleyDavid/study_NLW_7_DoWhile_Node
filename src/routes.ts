@@ -7,6 +7,10 @@ import { ensureAuthenticated } from "./middleware/ensureAuthenticated";
 
 const router = Router();
 
+router.get('/', (req, res) => {
+  res.json({status: true});
+});
+
 router.get('/github', (req, res) => {
   res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`);
 });
