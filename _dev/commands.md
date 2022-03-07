@@ -13,3 +13,7 @@ yarn prisma migrate dev (name = create-user)
 yarn prisma migrate dev (name = create-messages)  
 
 yarn prisma studio  
+
+
+# Docker Build
+docker build -t kesleydev/nlw_dowhile_app:1.0.0 .  
